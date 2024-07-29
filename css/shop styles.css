@@ -237,4 +237,16 @@ main {
         font-size: 14px; /* Smaller font size for mobile */
         padding: 8px; /* Adjust padding for mobile */
     }
+
+    #gay {
+        font-size: 40px; /* Adjust font size for better readability on smaller screens */
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    #gay img {
+        max-width: 90%; /* Ensure image scales down on small screens */
+        margin: 0 auto; /* Center image horizontally */
+    }
+
 }
