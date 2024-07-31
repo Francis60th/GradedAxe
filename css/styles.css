@@ -17,6 +17,7 @@ header {
     color: #fffcdf;
     padding: 10px;
     display: flex;
+    border-radius: 8px;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -101,7 +102,7 @@ nav {
 
 /* Main content styles */
 main {
-    padding: 20px;
+    padding: 55px;
 }
 
 /* Content section styles */
@@ -149,23 +150,48 @@ main {
 }
 
 .faq a:hover {
-    text-decoration: underline; /* Underline links on hover */
+    text-decoration: none; /* Underline links on hover */
 }
 
 /* Grid container styles for all devices */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    gap: 10px; /* Adjust gap between items */
+    gap: 20px; /* Adjust gap between items */
 }
 
 /* Grid item styles for all devices */
 .grid-item {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
     border-radius: 8px;
     overflow: hidden; /* Ensures image doesn't overflow grid-item */
-    position: relative; /* Allows absolute positioning of image */
+    box-sizing: border-box; /* Allows absolute positioning of image */
     transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.grid-item .overlay {
+    position: absolute; /* Absolute positioning within the grid-item */
+    top: 0; /* Cover the top of the grid-item */
+    left: 0; /* Cover the left of the grid-item */
+    width: 100%; /* Cover the full width of the grid-item */
+    height: 100%; /* Cover the full height of the grid-item */
+    background: rgba(64, 84, 102, 0.6); /* Semi-transparent background */
+    color: white; /* Text color */
+    font-size: 50px; /* Font size for the text */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center text alignment */
+    text-decoration: none;
+    box-sizing: border-box;
+    visibility: hidden; /* Hide overlay by default */
+    opacity: 0; /* Make overlay fully transparent */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+.grid-item:hover .overlay {
+    visibility: visible; /* Show overlay */
+    opacity: 1; /* Make overlay fully opaque */
 }
 
 .grid-item img {
