@@ -246,6 +246,18 @@ main {
         max-height: 90px;
     }
 
+    
+    .grid-item .overlay {
+        font-size: 20px; /* Smaller font-size on mobile */
+        padding: 10px; /* Add padding for better readability */
+    }
+    
+    .grid-item img {
+           /* Ensure images scale properly */
+        max-width: 100%;
+        height: auto;
+    }
+
     /* Ensure grid layout is visible on mobile */
     .grid-container {
         display: grid;
