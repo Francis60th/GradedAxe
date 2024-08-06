@@ -1,7 +1,166 @@
+/* Set body background color */
+body {
+    background-color: #adb3c8; /* Replace with your desired background color */
+}
+
+/* Reset styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', serif; /* Palatino font family */
+}
+
+/* Header styles */
+header {
+    background-color: #000620;
+    color: #fffcdf;
+    padding: 10px;
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+/* Logo styles */
+.logo {
+    max-width: 190px;
+    position: absolute;
+    right: 0.1px;
+    left: 0.1px;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+.logo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header text styles */
+.header-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-grow: 1;
+}
+
+/* Title styles */
+header h1 {
+    margin-bottom: 1px;
+}
+
+/* Banner image styles */
+.banner-image {
+    max-height: 170px;
+    width: auto;
+    padding: 1px;
+}
+
+/* Navigation styles */
+nav {
+    margin-top: 1px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Dropdown menu button styles */
+#dropdown {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    max-width: 200px;
+    width: 100%;
+    background-color: #fffcdf; /* Background color */
+    color: #333; /* Text color */
+    position: relative;
+    appearance: none; /* Remove default styling */
+}
+
+/* Dropdown arrow icon */
+#dropdown::after {
+    content: '\25BE'; /* Unicode character for downward arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensures dropdown arrow does not interfere with clicking */
+}
+
+/* Adjust appearance on hover/focus */
+#dropdown:hover,
+#dropdown:focus {
+    border-color: #66afe9; /* Example color change on hover/focus */
+    outline: none; /* Remove default focus outline */
+}
+
+/* Main content styles */
+main {
+    padding: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 70px); /* Adjust based on header height */
+}
+
+/* Content section styles */
+#content {
+    font-size: 30px;
+    color: #000620;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+/* FAQ section styles */
+.faq {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fffcdf; /* Background color for FAQ section */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Limit width of FAQ section */
+}
+
+.faq ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.faq li {
+    margin-bottom: 20px;
+}
+
+.faq p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: left; /* Align text to the left */
+}
+
+.faq strong {
+    display: block;
+    text-align: left; /* Align strong text to the left */
+}
+
+.faq a {
+    color: #0066cc; /* Link color */
+    text-decoration: none;
+}
+
+.faq a:hover {
+    text-decoration: none; /* Underline links on hover */
+}
+
 /* Grid container styles for all devices */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
     gap: 20px; /* Adjust gap between items */
     justify-items: center; /* Center items horizontally within the grid */
 }
@@ -14,9 +173,17 @@
     box-sizing: border-box; /* Allows absolute positioning of image */
     transition: transform 0.3s ease; /* Smooth transition for transform */
     width: 100%; /* Ensure grid items take full width of their grid column */
-    max-width: 300px; /* Optional: Set a maximum width for better control */
+    max-width: 400px; /* Increase the maximum width for larger images */
 }
 
+/* Grid item image styles */
+.grid-item img {
+    width: 100%; /* Ensure images take up full width of the grid item */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+/* Grid item overlay styles */
 .grid-item .overlay {
     position: absolute; /* Absolute positioning within the grid-item */
     top: 0; /* Cover the top of the grid-item */
@@ -42,14 +209,23 @@
     opacity: 1; /* Make overlay fully opaque */
 }
 
-.grid-item img {
-    max-width: 100%; /* Ensure images don't exceed their container */
-    height: auto; /* Maintain aspect ratio */
-    display: block;
-}
-
 .grid-item:hover {
     transform: scale(1.05); /* Scale item on hover */
+}
+
+/* Container for the flow chart */
+.chart-container {
+    max-width: 90%; /* Adjust as needed */
+    max-height: 80vh; /* Ensures the chart doesn't exceed viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flow chart image styles */
+.flow-chart {
+    width: 100%; /* Scale image to fit its container */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Media query for smaller screens */
@@ -94,14 +270,13 @@
         max-height: 90px;
     }
 
+    .grid-item {
+        max-width: 100%; /* Allow grid items to scale fully on small screens */
+    }
+
     .grid-item .overlay {
         font-size: 20px; /* Smaller font-size on mobile */
         padding: 10px; /* Add padding for better readability */
-    }
-    
-    .grid-item img {
-        max-width: 100%; /* Ensure images scale properly */
-        height: auto;
     }
 
     /* Ensure grid layout is visible on mobile */
@@ -117,5 +292,11 @@
 
     .faq p {
         font-size: 16px;
+    }
+
+    /* Adjust chart-container for smaller screens */
+    .chart-container {
+        max-width: 100%;
+        max-height: 70vh; /* Adjust height for smaller screens */
     }
 }
