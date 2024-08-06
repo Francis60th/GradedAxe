@@ -158,6 +158,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three equal columns */
     gap: 20px; /* Adjust gap between items */
+    justify-items: center; /* Center items horizontally within the grid */
 }
 
 /* Grid item styles for all devices */
@@ -167,6 +168,8 @@ main {
     overflow: hidden; /* Ensures image doesn't overflow grid-item */
     box-sizing: border-box; /* Allows absolute positioning of image */
     transition: transform 0.3s ease; /* Smooth transition for transform */
+    width: 100%; /* Ensure grid items take full width of their grid column */
+    max-width: 300px; /* Optional: Set a maximum width for better control */
 }
 
 .grid-item .overlay {
@@ -246,15 +249,13 @@ main {
         max-height: 90px;
     }
 
-    
     .grid-item .overlay {
         font-size: 20px; /* Smaller font-size on mobile */
         padding: 10px; /* Add padding for better readability */
     }
     
     .grid-item img {
-           /* Ensure images scale properly */
-        max-width: 100%;
+        max-width: 100%; /* Ensure images scale properly */
         height: auto;
     }
 
