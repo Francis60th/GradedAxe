@@ -103,9 +103,6 @@ nav {
 /* Main content styles */
 main {
     padding: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: calc(100vh - 70px); /* Adjust based on header height */
 }
 
@@ -162,7 +159,8 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
     gap: 20px; /* Adjust gap between items */
-    justify-items: center; /* Center items horizontally within the grid */
+    justify-content: center; /* Center items horizontally */
+    padding: 0 10px; /* Add padding for better spacing */
 }
 
 /* Grid item styles for all devices */
@@ -173,7 +171,7 @@ main {
     box-sizing: border-box; /* Allows absolute positioning of image */
     transition: transform 0.3s ease; /* Smooth transition for transform */
     width: 100%; /* Ensure grid items take full width of their grid column */
-    max-width: 400px; /* Increase the maximum width for larger images */
+    max-width: 100%; /* Ensure items do not exceed container width */
 }
 
 /* Grid item image styles */
@@ -220,6 +218,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto; /* Center the chart container horizontally */
 }
 
 /* Flow chart image styles */
