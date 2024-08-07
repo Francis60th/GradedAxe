@@ -1,8 +1,8 @@
-/*header content*/
+/* header content */
 
 header {
     background-color: #000620;
-    padding: 5px;
+    padding: 20px;
 }
 
 .header-content {
@@ -25,7 +25,7 @@ header {
     left: 0;
 }
 
-/*body content*/
+/* body content */
 
 body {
     background-color: #adb3c8;
@@ -39,6 +39,8 @@ main {
     justify-content: center;
 }
 
+/* tile pop style */
+
 .main-tiles {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -46,3 +48,72 @@ main {
     justify-content: center;
 }
 
+.tile {
+    position: relative;
+    display: block; /* Makes the <a> tag act as a block-level element */
+    overflow: hidden; /* Ensures the overlay stays within the tile */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px;
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Inherits color from parent */
+}
+
+.tile img {
+    width: 100%;
+    height: auto;
+}
+
+.tile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the color and opacity as needed */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tile:hover {
+    transform: scale(1.05); /* Slightly enlarge the tile */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Optional: add a shadow for a more pronounced pop effect */
+}
+
+.tile:hover::before {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 55px;
+    text-align: center;
+    padding: 20px; /* Adjust padding for better text placement */
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 100%;
+}
+
+.tile:hover .overlay {
+    opacity: 1;
+}
+
+/* back button */
+
+.back-button {
+    background-color: #fffcdf;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    top: 220px;
+    left: 15px;
+}
