@@ -14,11 +14,16 @@
         <div class="header-text">
             <h1><img src="images/GradedBanner.png" alt="Banner" class="banner-image"></h1>
             <nav>
-                <select id="dropdown" onchange="redirectToUrl(this)">
-                    <option value="">Start Here</option>
-                    <option value="subpages/FAQ.html">FAQ</option>
-                    <option value="subpages/Shop.html">Shop</option>
-                </select>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Start Here</a>
+                        <ul class="dropdown">
+                            <li><a href="subpages/FAQ.html">FAQ</a></li>
+                            <li><a href="subpages/Shop.html">Shop</a></li>
+                        </ul>
+                    </li>
+                    <!-- Add more dropdown items here if needed -->
+                </ul>
             </nav>
         </div>
     </header>
@@ -33,13 +38,13 @@
                 <img src="images/Tile1.png" alt="Image 1">
                 <a href="https://discord.gg/qqaH2kYnDf" class="overlay" target="_blank" rel="noopener noreferrer">Join Our Discord</a>
             </div>
-            <div href="" class="grid-item">
+            <div class="grid-item">
                 <img src="images/Tile2.png" alt="Image 2">
                 <a href="https://www.youtube.com/@BoysAttheGatesOfHell" class="overlay" target="_blank" rel="noopener noreferrer">Watch Match Replays</a>
             </div>
             <div class="grid-item">
                 <img src="images/Tile3.png" alt="Image 3">
-                <a href="subpages/flow chart" class="overlay" target="_blank" rel="noopener noreferrer">Official Graded Flow Chart</a>
+                <div class="overlay">Tile 3 Description</div>
             </div>
         </div>
     </main>
