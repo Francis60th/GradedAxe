@@ -1,5 +1,5 @@
 @media (max-width: 768px) {
-        
+
     .logo-image {
         display: none;
     }
@@ -8,5 +8,16 @@
         max-height: 100px;
         margin-left: 0;
         margin-right: 0;
+    }
+    .main-tiles {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .tile img {
+        width: 80%; /* Scale down images within tiles */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 400px; /* Limit maximum width */
+        margin: 0 auto; /* Center images within tiles */
+        display: block; /* Ensure images are displayed as block elements */
     }
 }
