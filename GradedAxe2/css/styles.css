@@ -43,19 +43,17 @@ main {
 
 .main-tiles {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 2fr);
     gap: 35px;
     justify-content: center;
 }
 
 .tile {
     position: relative;
-    display: block; /* Makes the <a> tag act as a block-level element */
-    overflow: hidden; /* Ensures the overlay stays within the tile */
+    display: block;
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 4px;
-    text-decoration: none; /* Removes underline from links */
-    color: inherit; /* Inherits color from parent */
+    border-radius: 20px;
 }
 
 .tile img {
