@@ -1,12 +1,8 @@
+/*header content*/
+
 header {
     background-color: #000620;
     padding: 5px;
-}
-
-body {
-    background-color: #adb3c8;
-    margin: 0;
-    padding: 0;
 }
 
 .header-content {
@@ -14,7 +10,6 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    position: relative;
 }
 
 .banner-image {
@@ -28,3 +23,25 @@ body {
     position: absolute;
     left: 0;
 }
+
+/*body content*/
+
+body {
+    background-color: #adb3c8;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    justify-content: center;
+}
+
