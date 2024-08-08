@@ -3,26 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mortar Man</title>
-    <link rel="stylesheet" href="../../css/styles.css">
-    <link rel="stylesheet" href="../../css/mobile styles.css">
+    <link rel="stylesheet" href="../css/art styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/mobile styles.css">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <img src="../../images/GradedLogo.png" class="logo-image">
-            <img src="../../images/GradedBanner.png" class="banner-image">
+            <img src="../images/GradedLogo.png" class="logo-image">
+            <img src="../images/GradedBanner.png" class="banner-image">
         </div>
     </header>
 
     <main>
-        <a href="../shop.html" class="back-button">Back to Shop</a>
-
-        <section class="item-content">
-            <h1>Mortar Man</h1>
-            <img src="../../images/infantry.png" alt="Item 2" class="shop-item-img">
-            <p>Details about mortar man</p>
+        <a href="../GradedAxe.html" class="back-button">Back to Main Menu</a>
+    
+        <!-- Art Gallery Section -->
+        <section class="art-gallery">
+            <button class="scroll-btn left">&lt;</button>
+            <div class="album-container">
+                <div class="album" data-album="album1">
+                    <img src="../images/album1-preview.png" alt="Album 1">
+                    <div class="album-name">Album 1</div>
+                </div>
+                <div class="album" data-album="album2">
+                    <img src="../images/album2-preview.png" alt="Album 2">
+                    <div class="album-name">Album 2</div>
+                </div>
+                <!-- Add more albums as needed -->
+            </div>
+            <button class="scroll-btn right">&gt;</button>
         </section>
+    
+        <!-- Fullscreen Image View -->
+        <div class="fullscreen-view" id="fullscreenView">
+            <button class="close-btn">&times;</button>
+            <button class="nav-btn prev">&lt;</button>
+            <img src="" alt="Fullscreen Image" id="fullscreenImage">
+            <button class="nav-btn next">&gt;</button>
+        </div>
     </main>
+    
+    <!-- Link to external JavaScript file -->
+    <script src="../scripts/gallery.js"></script>
 </body>
 </html>
