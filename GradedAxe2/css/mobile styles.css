@@ -55,4 +55,12 @@
         gap: 10px;
     }
 
+    .faq {
+        max-width: 500px;
+    }
+
+    #content {
+        font-size: 15px;
+    }
+
 }
