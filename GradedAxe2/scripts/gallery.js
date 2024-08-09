@@ -6,13 +6,21 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentIndex = 0;
     let currentAlbumImages = [];
 
+    // Calculate the width of one album and the gap
+    const albumWidth = document.querySelector('.album').offsetWidth;
+    const containerStyle = getComputedStyle(albumContainer);
+    const gap = parseFloat(containerStyle.gap); // Gap between albums in pixels
+    
+    // Calculate the width to scroll (album width + 2 * gap)
+    const scrollAmount = albumWidth + gap;
+
     // Scroll buttons
     document.querySelector('.scroll-btn.left').addEventListener('click', () => {
-        albumContainer.scrollBy({ left: -200, behavior: 'smooth' });
+        albumContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     });
 
     document.querySelector('.scroll-btn.right').addEventListener('click', () => {
-        albumContainer.scrollBy({ left: 200, behavior: 'smooth' });
+        albumContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     });
 
     // Album click event
@@ -39,11 +47,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     '../images/album3/history.png',
                     '../images/album3/history2.png',
                     '../images/album3/history3.png',
+                    '../images/album3/history4.png',
                 ];
             } else if (albumName === 'album4') {
                 currentAlbumImages = [
-                    '../images/album4/history.png',
-                    '../images/album4/history2.png',
+                    '../images/album4/gay rockets 1.png',
+                    '../images/album4/gay rockets 2.png',
+                    '../images/album4/gay rockets 3.png',
+                    '../images/album4/gay rockets 4.png',
+                    '../images/album4/gay rockets 5.png',
                 ];
             }
 
