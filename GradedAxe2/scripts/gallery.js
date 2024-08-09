@@ -29,7 +29,21 @@ document.addEventListener('DOMContentLoaded', function () {
             } else if (albumName === 'album2') {
                 currentAlbumImages = [
                     '../images/album2/oblock1.png',
-                    '../images/album2/oblock2.png'
+                    '../images/album2/oblock2.png',
+                    '../images/album2/oblock3.png',
+                    '../images/album2/oblock4.png',
+                    '../images/album2/oblock5.png',
+                ];
+            } else if (albumName === 'album3') {
+                currentAlbumImages = [
+                    '../images/album3/history.png',
+                    '../images/album3/history2.png',
+                    '../images/album3/history3.png',
+                ];
+            } else if (albumName === 'album4') {
+                currentAlbumImages = [
+                    '../images/album4/history.png',
+                    '../images/album4/history2.png',
                 ];
             }
 

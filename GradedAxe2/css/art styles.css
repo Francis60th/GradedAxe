@@ -10,22 +10,25 @@
 
 .album-container {
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
     scroll-behavior: smooth;
     gap: 20px;
+    padding: 10px 0;
 }
 
 .album {
     flex: 0 0 auto;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     text-align: center;
     cursor: pointer;
 }
 
 .album img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
 }
 
