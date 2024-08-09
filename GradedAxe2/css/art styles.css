@@ -6,23 +6,28 @@
     position: relative;
     overflow: hidden;
     padding: 20px;
+    width: 100%;
 }
 
 .album-container {
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden; /* Hide scrollbar */
     overflow-y: hidden;
     scroll-behavior: smooth;
     gap: 20px;
     padding: 10px 0;
+    width: 100%;
+    white-space: nowrap; /* Prevents line breaks */
 }
 
 .album {
     flex: 0 0 auto;
-    width: 400px;
+    width: 32.4%; /* Adjust to show 3 albums at a time */
     height: 400px;
     text-align: center;
     cursor: pointer;
+    position: relative;
+    scroll-snap-align: start; /* Ensures each album aligns to start */
 }
 
 .album img {
@@ -33,11 +38,17 @@
 }
 
 .album-name {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #000;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: #fffcdf;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
-
 .scroll-btn {
     background-color: #000;
     color: #fff;
@@ -49,6 +60,7 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+    border-radius: 50%;
 }
 
 .scroll-btn.left {

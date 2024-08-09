@@ -64,4 +64,9 @@
         font-size: 15px;
     }
 
+    .album {
+        width: 350px;
+        height: 350px;
+    }
+
 }
